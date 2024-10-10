@@ -1,12 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+:root{
+    --cor-principal: rgb(2, 176, 199);
+    --cor-segundaria: rgb(22, 23, 59);
+    --cor-terciaria: rgb(250, 241, 116);
+    --detalhes: rgb(167, 202, 62);
+    --branco: rgb(254, 254, 254);
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 
-body{
-    margin: 10px;
+.navbar-titulo{
+    font-family: 'Anton SC', sans-serif;
+    color: var(--detalhes);
+}
+
+.navbar-titulo:hover{
+    color: var(--cor-principal);
+}
+
+.navbar-titulo img{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.secoes{
+    min-height: 90vh;
+    padding: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 50px;
 }
@@ -38,15 +66,66 @@ input[type="number"], input[type="text"]{
     justify-content: space-around;
 }
 
-#enviaPersonagem{
-    color: whitesmoke;
-    background-color: blue;
+input[type="button"]{
+    color: var(--branco);
+    background-color: var(--cor-principal);
     padding: 10px 5px;
     width: 18rem;
     border: 0;
     border-radius: 5px;
 }
 
-#enviaPersonagem:hover{
-    background-color: darkblue;
+input[type="button"]:hover{
+    background-color: var(--cor-segundaria);
+}
+
+.titulo-personagem, .titulo-episodio{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.titulo-personagem:hover, .titulo-episodio:hover{
+    
+    color: var(--detalhes);
+}
+
+.container-destacados{
+    text-align: center;
+    color: var(--cor-terciaria);
+
+    & h1{
+        font-size: 3em;
+        font-weight: 800;
+    }
+
+    & p{
+        font-weight: 600;
+    }
+}
+
+.personagensDestacados{
+    width: 400px;
+    height: 400px;
+}
+
+.secao-destacados img{
+    border-radius: 50%;
+}
+
+.secao-destacados img:not(:hover){
+    transition: ease 1s;
+    opacity: 0.2;
+    filter: grayscale(70%)
+}
+
+.form-episodio{
+    margin: 20px 10px;
+    width: 80%;
+}
+
+@media (max-width:  768px) {
+    .personagensDestacados{
+        width: 300px;
+        height: 300px;
+    }
 }
