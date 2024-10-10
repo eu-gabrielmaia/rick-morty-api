@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.titulo{
+    font-size: 2em;
+    text-align: center;
+}
+
+form input{
+    margin-bottom: 15px;
+}
+
+input[type="number"], input[type="text"]{
+    width: 18rem;
+    padding: 10px 5px;
+}
+
+.card{
+    text-align: center;
+}
+
+.card-link{
+    font-weight: 600;
+}
+
+.card-descricao{
+    display: flex;
+    justify-content: space-around;
+}
+
+#enviaPersonagem{
+    color: whitesmoke;
+    background-color: blue;
+    padding: 10px 5px;
+    width: 18rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+#enviaPersonagem:hover{
+    background-color: darkblue;
+}
